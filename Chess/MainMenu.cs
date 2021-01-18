@@ -52,19 +52,14 @@ namespace Chess
                     ccolor = "white";
             }
 
-            if (rbtnEasy.Checked == false && rbtnHard.Checked == false && rbtnNormal.Checked == false)
+            if (nudDifficulty.Value <= 0)
             {
                 MessageBox.Show("Choose difficulty");
             }
             else
             {
                 difficulty = true;
-                if (rbtnEasy.Checked)
-                    ddifficulty = 3;
-                if (rbtnNormal.Checked)
-                    ddifficulty = 5;
-                if (rbtnHard.Checked)
-                    ddifficulty = 7;
+                ddifficulty = (int)nudDifficulty.Value;
             }
 
             if (color && difficulty)
@@ -78,9 +73,6 @@ namespace Chess
                     ui.Show();
                     btnBlack.Enabled = false; 
                     btnWhite.Enabled = false;
-                    rbtnEasy.Enabled = false;
-                    rbtnNormal.Enabled = false;
-                    rbtnHard.Enabled = false;
                     btnPlay.Enabled = false;
                 }
             }

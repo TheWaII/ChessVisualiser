@@ -29,38 +29,17 @@ namespace Chess
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
-            this.pBoxKingWhite = new System.Windows.Forms.PictureBox();
-            this.pBoxKingBlack = new System.Windows.Forms.PictureBox();
             this.btnWhite = new System.Windows.Forms.Button();
             this.btnBlack = new System.Windows.Forms.Button();
             this.btnPlay = new System.Windows.Forms.Button();
-            this.rbtnEasy = new System.Windows.Forms.RadioButton();
-            this.rbtnHard = new System.Windows.Forms.RadioButton();
-            this.rbtnNormal = new System.Windows.Forms.RadioButton();
-            this.grpbxDifficulty = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pBoxKingWhite)).BeginInit();
+            this.pBoxKingBlack = new System.Windows.Forms.PictureBox();
+            this.pBoxKingWhite = new System.Windows.Forms.PictureBox();
+            this.nudDifficulty = new System.Windows.Forms.NumericUpDown();
+            this.lblDifficulty = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxKingBlack)).BeginInit();
-            this.grpbxDifficulty.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxKingWhite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDifficulty)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pBoxKingWhite
-            // 
-            this.pBoxKingWhite.Image = global::Chess.Properties.Resources.WhiteKing;
-            this.pBoxKingWhite.Location = new System.Drawing.Point(12, 12);
-            this.pBoxKingWhite.Name = "pBoxKingWhite";
-            this.pBoxKingWhite.Size = new System.Drawing.Size(80, 82);
-            this.pBoxKingWhite.TabIndex = 0;
-            this.pBoxKingWhite.TabStop = false;
-            // 
-            // pBoxKingBlack
-            // 
-            this.pBoxKingBlack.Image = global::Chess.Properties.Resources.BlackKing;
-            this.pBoxKingBlack.Location = new System.Drawing.Point(344, 12);
-            this.pBoxKingBlack.Name = "pBoxKingBlack";
-            this.pBoxKingBlack.Size = new System.Drawing.Size(80, 82);
-            this.pBoxKingBlack.TabIndex = 2;
-            this.pBoxKingBlack.TabStop = false;
             // 
             // btnWhite
             // 
@@ -86,7 +65,7 @@ namespace Chess
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(12, 269);
+            this.btnPlay.Location = new System.Drawing.Point(12, 139);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(412, 23);
             this.btnPlay.TabIndex = 5;
@@ -94,72 +73,64 @@ namespace Chess
             this.btnPlay.UseVisualStyleBackColor = true;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
-            // rbtnEasy
+            // pBoxKingBlack
             // 
-            this.rbtnEasy.AutoSize = true;
-            this.rbtnEasy.Location = new System.Drawing.Point(16, 42);
-            this.rbtnEasy.Name = "rbtnEasy";
-            this.rbtnEasy.Size = new System.Drawing.Size(48, 17);
-            this.rbtnEasy.TabIndex = 7;
-            this.rbtnEasy.TabStop = true;
-            this.rbtnEasy.Text = "Easy";
-            this.rbtnEasy.UseVisualStyleBackColor = true;
+            this.pBoxKingBlack.Image = global::Chess.Properties.Resources.BlackKing;
+            this.pBoxKingBlack.Location = new System.Drawing.Point(344, 12);
+            this.pBoxKingBlack.Name = "pBoxKingBlack";
+            this.pBoxKingBlack.Size = new System.Drawing.Size(80, 82);
+            this.pBoxKingBlack.TabIndex = 2;
+            this.pBoxKingBlack.TabStop = false;
             // 
-            // rbtnHard
+            // pBoxKingWhite
             // 
-            this.rbtnHard.AutoSize = true;
-            this.rbtnHard.Location = new System.Drawing.Point(323, 42);
-            this.rbtnHard.Name = "rbtnHard";
-            this.rbtnHard.Size = new System.Drawing.Size(48, 17);
-            this.rbtnHard.TabIndex = 8;
-            this.rbtnHard.TabStop = true;
-            this.rbtnHard.Text = "Hard";
-            this.rbtnHard.UseVisualStyleBackColor = true;
+            this.pBoxKingWhite.Image = global::Chess.Properties.Resources.WhiteKing;
+            this.pBoxKingWhite.Location = new System.Drawing.Point(12, 12);
+            this.pBoxKingWhite.Name = "pBoxKingWhite";
+            this.pBoxKingWhite.Size = new System.Drawing.Size(80, 82);
+            this.pBoxKingWhite.TabIndex = 0;
+            this.pBoxKingWhite.TabStop = false;
             // 
-            // rbtnNormal
+            // nudDifficulty
             // 
-            this.rbtnNormal.AutoSize = true;
-            this.rbtnNormal.Location = new System.Drawing.Point(159, 42);
-            this.rbtnNormal.Name = "rbtnNormal";
-            this.rbtnNormal.Size = new System.Drawing.Size(58, 17);
-            this.rbtnNormal.TabIndex = 9;
-            this.rbtnNormal.TabStop = true;
-            this.rbtnNormal.Text = "Normal";
-            this.rbtnNormal.UseVisualStyleBackColor = true;
+            this.nudDifficulty.Location = new System.Drawing.Point(162, 113);
+            this.nudDifficulty.Name = "nudDifficulty";
+            this.nudDifficulty.Size = new System.Drawing.Size(120, 20);
+            this.nudDifficulty.TabIndex = 6;
             // 
-            // grpbxDifficulty
+            // lblDifficulty
             // 
-            this.grpbxDifficulty.Controls.Add(this.rbtnNormal);
-            this.grpbxDifficulty.Controls.Add(this.rbtnHard);
-            this.grpbxDifficulty.Controls.Add(this.rbtnEasy);
-            this.grpbxDifficulty.Location = new System.Drawing.Point(12, 181);
-            this.grpbxDifficulty.Name = "grpbxDifficulty";
-            this.grpbxDifficulty.Size = new System.Drawing.Size(412, 82);
-            this.grpbxDifficulty.TabIndex = 10;
-            this.grpbxDifficulty.TabStop = false;
-            this.grpbxDifficulty.Text = "Difficulty";
+            this.lblDifficulty.AutoSize = true;
+            this.lblDifficulty.BackColor = System.Drawing.SystemColors.Control;
+            this.lblDifficulty.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDifficulty.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDifficulty.Location = new System.Drawing.Point(182, 86);
+            this.lblDifficulty.Name = "lblDifficulty";
+            this.lblDifficulty.Size = new System.Drawing.Size(77, 24);
+            this.lblDifficulty.TabIndex = 7;
+            this.lblDifficulty.Text = "Difficulty";
             // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 300);
-            this.Controls.Add(this.grpbxDifficulty);
+            this.ClientSize = new System.Drawing.Size(436, 171);
+            this.Controls.Add(this.lblDifficulty);
+            this.Controls.Add(this.nudDifficulty);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.btnBlack);
             this.Controls.Add(this.btnWhite);
             this.Controls.Add(this.pBoxKingBlack);
             this.Controls.Add(this.pBoxKingWhite);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Start";
             this.Text = "Chess";
-            ((System.ComponentModel.ISupportInitialize)(this.pBoxKingWhite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxKingBlack)).EndInit();
-            this.grpbxDifficulty.ResumeLayout(false);
-            this.grpbxDifficulty.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxKingWhite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDifficulty)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -170,9 +141,7 @@ namespace Chess
         private System.Windows.Forms.Button btnWhite;
         private System.Windows.Forms.Button btnBlack;
         private System.Windows.Forms.Button btnPlay;
-        private System.Windows.Forms.RadioButton rbtnEasy;
-        private System.Windows.Forms.RadioButton rbtnHard;
-        private System.Windows.Forms.RadioButton rbtnNormal;
-        private System.Windows.Forms.GroupBox grpbxDifficulty;
+        private System.Windows.Forms.NumericUpDown nudDifficulty;
+        private System.Windows.Forms.Label lblDifficulty;
     }
 }
