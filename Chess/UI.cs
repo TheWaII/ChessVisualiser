@@ -117,7 +117,10 @@ namespace Chess
             stream.Write(Encoding.ASCII.GetBytes(tbxMove.Text),0,tbxMove.Text.Length);
             Int32 bytes = stream.Read(data, 0, data.Length);
             string message = Encoding.ASCII.GetString(data, 0, bytes);
-            DrawBoard(message);
+            if (message != "Draw" || message != "White won" || message != "Black won")
+                DrawBoard(message);
+            else
+                MessageBox.Show(message);
         }
     }
 }
